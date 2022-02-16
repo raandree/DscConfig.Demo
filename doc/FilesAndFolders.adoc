@@ -1,4 +1,4 @@
-// CommonTasks YAML Reference: FilesAndFolders
+// DscConfig.Demo YAML Reference: FilesAndFolders
 // ===========================================
 
 :YmlCategory: FilesAndFolders
@@ -17,7 +17,7 @@ DestinationPath and SourcePath must both be accessible by the target Node.
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/FilesAndFolders
+| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/FilesAndFolders
 | DSC Resource   | https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/?view=powershell-5.1[PSDesiredStateConfiguration]
 | Documentation  | https://docs.microsoft.com/en-us/powershell/scripting/dsc/reference/resources/windows/fileresource?view=powershell-5.1[File]
 |===
@@ -53,7 +53,7 @@ DestinationPath and SourcePath must both be accessible by the target Node.
 |
 | String
 | The location on the target node
-| 
+|
 
 | Attributes
 |
@@ -129,7 +129,7 @@ Only valid when used with Type File.
 | Boolean
 | Determines if the resource should monitor for new files added to the source directory after the initial copy.
 
-A value of `True` indicates that, after the initial copy, any new source files should be copied to the destination. 
+A value of `True` indicates that, after the initial copy, any new source files should be copied to the destination.
 If set to `False`, the resource caches the contents of the source directory and ignores any files added after the initial copy.
 | - *False* (default)
   - True
@@ -166,13 +166,13 @@ If set to `False`, the resource caches the contents of the source directory and 
 | Identity
 | Key
 | String
-| The identity to set permissions for. 
+| The identity to set permissions for.
 |
 
 | Rights
 |
 | String[]
-| The permissions to include in this rule. 
+| The permissions to include in this rule.
 
   Optional if `Ensure` is set to value `Absent`.
 | - ListDirectory

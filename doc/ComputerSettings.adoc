@@ -1,4 +1,4 @@
-// CommonTasks YAML Reference: ComputerSettings
+// DscConfig.Demo YAML Reference: ComputerSettings
 // ============================================
 
 :YmlCategory: ComputerSettings
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/ComputerSettings
+| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/ComputerSettings
 | DSC Resource   | https://github.com/dsccommunity/ComputerManagementDsc[ComputerManagementDsc]
 | Documentation  | https://github.com/dsccommunity/ComputerManagementDsc/wiki/Computer[Computer],
                    https://github.com/dsccommunity/ComputerManagementDsc/wiki/TimeZone[TimeZone]
@@ -65,7 +65,7 @@
 |
 | PSCredential
 | Credential to be used to join a domain.
-| 
+|
 
 | TimeZone
 |

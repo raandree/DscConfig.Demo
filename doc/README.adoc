@@ -1,4 +1,4 @@
-// CommonTasks YAML Reference
+// DscConfig.Demo YAML Reference
 // ========================================
 
 // GitHub Flavored Asciidoc (GFA)
@@ -15,17 +15,17 @@ endif::[]
 :ref_utf-8:  https://wikipedia.org/wiki/UTF-8[UTF-8]
 
 
-= CommonTasks YAML Reference
+= DscConfig.Demo YAML Reference
 
 ifdef::env-github[]
 [NOTE]
 ====
 GitHub supports only a subset of the https://asciidoc.org/[AsciiDoc] language.
-To create your own documentation use https://asciidoctor.org/[Asciidoctor] or the https://asciidocfx.com/[Asciidoc Book Editor]. 
+To create your own documentation use https://asciidoctor.org/[Asciidoctor] or the https://asciidocfx.com/[Asciidoc Book Editor].
 ====
 endif::[]
 
-YAML reference of DSC resources of https://github.com/dsccommunity/CommonTasks[Common Tasks]
+YAML reference of DSC resources of https://github.com/dsccommunity/DscConfig.Demo[Common Tasks]
 
 .Links
 
@@ -34,7 +34,7 @@ YAML reference of DSC resources of https://github.com/dsccommunity/CommonTasks[C
 . Exercise 4: https://github.com/dsccommunity/DscWorkshop/blob/dev/Exercises/Task2/Exercise4.md[Add another layer to your hierarchy]
 . Exercise 5: https://github.com/dsccommunity/DscWorkshop/blob/dev/Exercises/Task2/StretchGoal.md[Create and use a custom Configuration (DSC Composite Resource)]
 
-.Store encrypted strings in the YAML files 
+.Store encrypted strings in the YAML files
 
 - Instructions: https://www.janhendrikpeters.de/2020/01/17/dsc-configuration-data-encryption-done-right/[DSC Configuration data encryption]
 

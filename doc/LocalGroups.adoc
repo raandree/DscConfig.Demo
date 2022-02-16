@@ -1,4 +1,4 @@
-// CommonTasks YAML Reference: LocalGroups
+// DscConfig.Demo YAML Reference: LocalGroups
 // =======================================
 
 :YmlCategory: LocalGroups
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/LocalGroups
+| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/LocalGroups
 | DSC Resource   | https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration]
 | Documentation  | https://github.com/dsccommunity/xPSDesiredStateConfiguration/tree/main/source/DSCResources/DSC_xGroupResource[xGroup]
 |===
@@ -56,7 +56,7 @@
 |
 
 | Ensure
-| 
+|
 | String
 | Indicates if the group should exist or not.
 | - Absent

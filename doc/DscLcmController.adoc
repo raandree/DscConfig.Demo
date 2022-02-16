@@ -1,4 +1,4 @@
-// CommonTasks YAML Reference: DscLcmController
+// DscConfig.Demo YAML Reference: DscLcmController
 // ========================================
 
 :YmlCategory: DscLcmController
@@ -13,14 +13,14 @@
 .{YmlCategory} replaces most of the default settings controlling the LCM that you usually set with `Set-DscLocalConfigurationManager`.
 
 These new settings are controlling the external trigger of the LCM.
-There is no `ConfigurationModeFrequencyMins` anymore. 
+There is no `ConfigurationModeFrequencyMins` anymore.
 Instead there are two new values, `AutoCorrectInterval` and `MonitorInterval`.
 
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/DscLcmController
-| DSC Resource   | https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/?view=powershell-5.1[PSDesiredStateConfiguration], 
+| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/DscLcmController
+| DSC Resource   | https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/?view=powershell-5.1[PSDesiredStateConfiguration],
                    https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration],
                    https://github.com/dsccommunity/ComputerManagementDsc[ComputerManagementDsc]
 | Documentation  | https://dsccommunity.org/blog/dsc-maintenance-windows/[Realizing maintenance windows with DSC]

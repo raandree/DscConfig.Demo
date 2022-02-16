@@ -1,4 +1,4 @@
-// CommonTasks YAML Reference: SoftwarePackages
+// DscConfig.Demo YAML Reference: SoftwarePackages
 // ========================================
 
 :YmlCategory: SoftwarePackages
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/SoftwarePackages
+| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/SoftwarePackages
 | DSC Resource   | https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration]
 | Documentation  | https://github.com/dsccommunity/xPSDesiredStateConfiguration#xpackage[xPackage]
 |===
@@ -96,7 +96,7 @@
 
 | ReturnCode
 |
-| Uint32[] 
+| Uint32[]
 | An array of return codes that are returned after a successful installation. +
   Some special return codes of MsiExec can be found https://docs.microsoft.com/en-us/windows/win32/msi/error-codes[online].
 |
