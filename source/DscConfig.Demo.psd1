@@ -1,5 +1,5 @@
 @{
-    RootModule        = 'CommonTasks.psm1'
+    RootModule        = 'DscConfig.Demo.psm1'
     ModuleVersion     = '0.4'
     GUID              = '63e8bf79-62d3-4249-8fe6-9a766fbe8481'
     Author            = 'DSC Community'
@@ -17,8 +17,8 @@
         PSData = @{
             Prerelease   = ''
             Tags         = @('DesiredStateConfiguration', 'DSC', 'DSCResource')
-            LicenseUri   = 'https://github.com/dsccommunity/CommonTasks/blob/main/LICENSE'
-            ProjectUri   = 'https://github.com/dsccommunity/CommonTasks'
+            LicenseUri   = 'https://github.com/dsccommunity/DscConfig.Demo/blob/main/LICENSE'
+            ProjectUri   = 'https://github.com/dsccommunity/DscConfig.Demo'
             IconUri      = 'https://dsccommunity.org/images/DSC_Logo_300p.png'
             ReleaseNotes = ''
         }

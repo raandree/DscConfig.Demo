@@ -1,4 +1,4 @@
-$dscResources = Get-DscResource -Module CommonTasks
+$dscResources = Get-DscResource -Module DscConfig.Demo
 $here = $PSScriptRoot
 
 $skippedDscResources = 'PowerShellRepositories'
@@ -48,7 +48,7 @@ f1
 
             configuration "Config_$dscResourceName" {
 
-                Import-DscResource -ModuleName CommonTasks
+                Import-DscResource -ModuleName DscConfig.Demo
 
                 node "localhost_$dscResourceName" {
 
@@ -88,7 +88,7 @@ f1
 
 Describe 'Final tests' -Tags FunctionalQuality {
     BeforeAll {
-        $compositeResouces = Get-DscResource -Module CommonTasks
+        $compositeResouces = Get-DscResource -Module DscConfig.Demo
         Write-Host "Number of composite resources: $($compositeResouces.Count)"
         $compositeResouces = $compositeResouces | Where-Object Name -NotIn $skippedDscResources
         Write-Host "Number of composite resources (considering 'skippedDscResources'): $($compositeResouces.Count)"
@@ -104,7 +104,7 @@ Describe 'Final tests' -Tags FunctionalQuality {
 
     It 'Composite resource folder count matches composite resource count' {
 
-        $compositeResouceFolders = dir -Path "$OutputDirectory\Module\CommonTasks\*\DSCResources\*"
+        $compositeResouceFolders = dir -Path "$OutputDirectory\Module\DscConfig.Demo\*\DSCResources\*"
         Write-Host "Number of composite resource folders: $($compositeResouceFolders.Count)"
         $compositeResouceFolders = $compositeResouceFolders | Where-Object Name -NotIn $skippedDscResources
         Write-Host "Number of composite resource folders (considering 'skippedDscResources'): $($compositeResouceFolders.Count)"

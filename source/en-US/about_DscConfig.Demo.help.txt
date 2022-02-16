@@ -1,5 +1,5 @@
 TOPIC
-    about_CommonTasks
+    about_DscConfig.Demo
 
 SHORT DESCRIPTION
     desc
