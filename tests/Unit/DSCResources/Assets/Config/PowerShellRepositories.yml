@@ -1,7 +1,0 @@
-﻿Repositories:
-  - Name: RepoA
-    SourceLocation: https://somegallery/v2
-    PublishLocation: https://somegallery/v2
-  - Name: RepoB
-    InstallationPolicy: trusted
-    SourceLocation: https://somegallery/v2

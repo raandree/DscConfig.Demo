@@ -1,3 +1,0 @@
-ServerName: SQL1
-SqlInstanceName: MSSQLSERVER
-RestartTimeout: 120

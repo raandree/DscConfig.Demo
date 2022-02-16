@@ -1,7 +1,0 @@
-﻿PrimaryZones:
-  - Name:          PrimaryZone1
-    ZoneFile:      MyZone.dns
-    DynamicUpdate: NonSecureAndSecure
-    Ensure:        Present
-
-  - Name: PrimaryZone2
