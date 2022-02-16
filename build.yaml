@@ -38,7 +38,7 @@ BuildWorkflow:
     - Pester_if_Code_Coverage_Under_Threshold
 
   publish:
-    - UpdateTag
+    - UpdateGitTag
     - SetChangeLog
     - publish_module_to_gallery
 
