@@ -39,9 +39,8 @@ BuildWorkflow:
 
   publish:
     - UpdateGitTag
-    - SetChangeLog
+    - CreateChangelogReleaseOutput
     - publish_module_to_gallery
-
 
 ####################################################
 #       PESTER  Configuration                      #
