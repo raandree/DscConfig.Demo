@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: ComputerSettings
+// CommonTasks YAML Reference: ComputerSettings
 // ============================================
 
 :YmlCategory: ComputerSettings
@@ -15,10 +15,11 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/ComputerSettings
+| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/ComputerSettings
 | DSC Resource   | https://github.com/dsccommunity/ComputerManagementDsc[ComputerManagementDsc]
 | Documentation  | https://github.com/dsccommunity/ComputerManagementDsc/wiki/Computer[Computer],
-                   https://github.com/dsccommunity/ComputerManagementDsc/wiki/TimeZone[TimeZone]
+                   https://github.com/dsccommunity/ComputerManagementDsc/wiki/TimeZone[TimeZone],
+                   https://github.com/dsccommunity/ComputerManagementDsc/wiki/RemoteDesktopAdmin[RemoteDesktopAdmin]
 |===
 
 
@@ -73,6 +74,18 @@
 | Specifies the TimeZone. +
 |  Use `Get-TimeZone -ListAvailable \| Format-Table` to get valid time zone strings.
 
+| AllowRemoteDesktop
+|
+| Bool
+| Enables or disabled remote desktop. +
+|
+
+| RemoteDesktopUserAuthentication
+|
+| String
+| Configures the authentication for remote desktop. +
+|  Secure, Unsecure
+
 |===
 
 .Example
@@ -84,4 +97,6 @@ ComputerSettings:
   DomainName: Contoso
   Credential: '[ENC=PE9ianMgVmVyc2lvbj0i...=]'
   TimeZone: Fiji Standard Time
+  AllowRemoteDesktop: true
+  RemoteDesktopUserAuthentication: Secure
 ----
