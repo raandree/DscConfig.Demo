@@ -15,6 +15,14 @@
         {
             "type": "PowerShell",
             "request": "launch",
+            "name": "Launch Tests",
+            "script": "${workspaceRoot}/Build.ps1",
+            "args": ["-Tasks test"],
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "PowerShell",
+            "request": "launch",
             "name": "Launch Build -ResolveDependency",
             "script": "${workspaceRoot}/Build.ps1",
             "args": ["-ResolveDependency"],
