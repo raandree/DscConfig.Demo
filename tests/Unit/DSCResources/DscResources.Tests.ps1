@@ -22,14 +22,28 @@ BeforeDiscovery {
         [PSCustomObject]$dscResourceModuleTable = @()
         $testCases += @{
             DscResourceName = $dscResource.Name
+            Skip            = ($dscResource.Name -in $skippedDscResources)
         }
     }
 
 }
 
-Describe "DSC Composite Resources compile" -Tags FunctionalQuality {
+Describe 'DSC Composite Resources compile' -Tags FunctionalQuality {
 
     It "'<DscResourceName>' compiles"-TestCases $testCases {
+
+        if ($Skip)
+        {
+            Set-ItResult -Skipped -Because "Tests for '$DscResourceName' are skipped"
+        }
+
+        $nodeData = @{
+            NodeName                    = "localhost_$dscResourceName"
+            PSDscAllowPlainTextPassword = $true
+            PSDscAllowDomainUser        = $true
+        }
+        $configurationData.AllNodes = @($nodeData)
+
         configuration "Config_$dscResourceName" {
 
             Import-DscResource -ModuleName DscConfig.Demo
@@ -41,7 +55,8 @@ Describe "DSC Composite Resources compile" -Tags FunctionalQuality {
                 {
                     $data = @{}
                 }
-                    (Get-DscSplattedResource -ResourceName $dscResourceName -ExecutionName $dscResourceName -Properties $data -NoInvoke).Invoke($data)
+
+                (Get-DscSplattedResource -ResourceName $dscResourceName -ExecutionName $dscResourceName -Properties $data -NoInvoke).Invoke($data)
             }
         }
 
@@ -87,5 +102,6 @@ Describe 'Final tests' -Tags FunctionalQuality {
         Write-Host (Compare-Object -ReferenceObject $compositeResouceFolders.Name -DifferenceObject $compositeResouces.Name | Out-String) -ForegroundColor Yellow
 
         $compositeResouces.Count | Should -Be $compositeResouceFolders.Count
+
     }
 }
