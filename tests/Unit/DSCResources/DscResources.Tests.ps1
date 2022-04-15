@@ -1,88 +1,63 @@
-$dscResources = Get-DscResource -Module DscConfig.Demo
-$here = $PSScriptRoot
+BeforeDiscovery {
+    $dscResources = Get-DscResource -Module DscConfig.Demo
+    $here = $PSScriptRoot
 
-$skippedDscResources = 'PowerShellRepositories'
+    $skippedDscResources = 'PowerShellRepositories'
 
-Import-Module -Name datum
+    Import-Module -Name datum
 
-$datum = New-DatumStructure -DefinitionFile $here\Assets\Datum.yml
-$allNodes = Get-Content -Path $here\Assets\AllNodes.yml -Raw | ConvertFrom-Yaml
+    $datum = New-DatumStructure -DefinitionFile $here\Assets\Datum.yml
+    $allNodes = Get-Content -Path $here\Assets\AllNodes.yml -Raw | ConvertFrom-Yaml
 
-$global:configurationData = @{
-    AllNodes = [array]$allNodes
-    Datum    = $Datum
-}
+    Initialize-DscResourceMetaInfo -ModulePath $RequiredModulesDirectory
 
-foreach ($dscResourceName in $dscResources.Name)
-{
-    Describe "'$dscResourceName' DSC Resource compiles" -Tags FunctionalQuality {
+    $global:configurationData = @{
+        AllNodes = [array]$allNodes
+        Datum    = $Datum
+    }
 
-        BeforeAll {
-            $tempExists = Test-Path -Path C:\Temp
-            if (-not $tempExists)
-            {
-                New-Item -Path C:\Temp -ItemType Directory | Out-Null
-            }
-            @'
-function f1 {
-    Get-Date
-}
-
-f1
-'@ | Set-Content -Path C:\Temp\JeaRoleTest.ps1 -Force
+    [hashtable[]]$testCases = @()
+    foreach ($dscResource in $dscResources)
+    {
+        [PSCustomObject]$dscResourceModuleTable = @()
+        $testCases += @{
+            DscResourceName = $dscResource.Name
         }
+    }
 
-        It "'$dscResourceName' compiles" {
+}
 
-            if ($dscResourceName -in $skippedDscResources)
-            {
-                Set-ItResult -Skipped -Because "Tests for '$dscResourceName' are skipped"
-            }
+Describe "DSC Composite Resources compile" -Tags FunctionalQuality {
 
-            $nodeData = @{
-                NodeName                    = "localhost_$dscResourceName"
-                PSDscAllowPlainTextPassword = $true
-                PSDscAllowDomainUser        = $true
-            }
-            $configurationData.AllNodes += $nodeData
+    It "'<DscResourceName>' compiles"-TestCases $testCases {
+        configuration "Config_$dscResourceName" {
 
-            configuration "Config_$dscResourceName" {
+            Import-DscResource -ModuleName DscConfig.Demo
 
-                Import-DscResource -ModuleName DscConfig.Demo
+            node "localhost_$dscResourceName" {
 
-                node "localhost_$dscResourceName" {
-
-                    $data = $configurationData.Datum.Config."$dscResourceName"
-                    if (-not $data)
-                    {
-                        $data = @{}
-                    }
-                    (Get-DscSplattedResource -ResourceName $dscResourceName -ExecutionName $dscResourceName -Properties $data -NoInvoke).Invoke($data)
+                $data = $configurationData.Datum.Config."$dscResourceName"
+                if (-not $data)
+                {
+                    $data = @{}
                 }
-            }
-
-            {
-                & "Config_$dscResourceName" -ConfigurationData $configurationData -OutputPath $OutputDirectory -ErrorAction Stop
-            } | Should -Not -Throw
-        }
-
-        It "'$dscResourceName' should have created a mof file" {
-            if ($dscResourceName -in $skippedDscResources)
-            {
-                Set-ItResult -Skipped -Because "Tests for '$dscResourceName' are skipped"
-            }
-
-            $mofFile = Get-Item -Path "$($OutputDirectory)\localhost_$dscResourceName.mof" -ErrorAction SilentlyContinue
-            $mofFile | Should -BeOfType System.IO.FileInfo
-        }
-
-        AfterAll {
-            Remove-Item -Path C:\Temp\JeaRoleTest.ps1
-            if (-not $tempExists)
-            {
-                Remove-Item -Path C:\Temp
+                    (Get-DscSplattedResource -ResourceName $dscResourceName -ExecutionName $dscResourceName -Properties $data -NoInvoke).Invoke($data)
             }
         }
+
+        {
+            & "Config_$dscResourceName" -ConfigurationData $configurationData -OutputPath $OutputDirectory -ErrorAction Stop
+        } | Should -Not -Throw
+    }
+
+    It "'<DscResourceName>' should have created a mof file" -TestCases $testCases {
+        if ($DscResourceName -in $skippedDscResources)
+        {
+            Set-ItResult -Skipped -Because "Tests for '$DscResourceName' are skipped"
+        }
+
+        $mofFile = Get-Item -Path "$($OutputDirectory)\localhost_$DscResourceName.mof" -ErrorAction SilentlyContinue
+        $mofFile | Should -BeOfType System.IO.FileInfo
     }
 }
 
