@@ -96,7 +96,7 @@ Describe 'Final tests' -Tags FunctionalQuality {
 
     It 'Composite resource folder count matches composite resource count' {
 
-        $compositeResouceFolders = dir -Path "$OutputDirectory\Module\DscConfig.Demo\*\DSCResources\*"
+        $compositeResouceFolders = dir -Path "$($moduleUnderTest.ModuleBase)\DSCResources\*"
         Write-Host "Number of composite resource folders: $($compositeResouceFolders.Count)"
         $compositeResouceFolders = $compositeResouceFolders | Where-Object Name -NotIn $skippedDscResources
         Write-Host "Number of composite resource folders (considering 'skippedDscResources'): $($compositeResouceFolders.Count)"
