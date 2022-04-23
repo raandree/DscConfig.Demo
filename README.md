@@ -1,9 +1,9 @@
 # DscConfig.Demo
 Build | Status | Last Commit | Latest Release | Lastest Preview Release
 --- | --- | --- | --- | ---
-Main | [![Build status](https://dev.azure.com/dsccommunity/DscConfig.Demo/_apis/build/status/dsccommunity.DscConfig.Demo?branchName=main)](https://dev.azure.com/dsccommunity/DscConfig.Demo/_build) | [![GitHub last commit](https://img.shields.io/github/last-commit/dsccommunity/DscConfig.Demo/main.svg)](https://github.com/dsccommunity/DscConfig.Demo/tree/master/) | [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/DscConfig.Demo.svg)](https://www.powershellgallery.com/packages/DscConfig.Demo/) | [![PowerShell Gallery (with prereleases)](https://img.shields.io/powershellgallery/vpre/DscConfig.Demo?label=DscConfig.Demo%20Preview)](https://www.powershellgallery.com/packages/DscConfig.Demo/)
+Main | [![Build status](https://dev.azure.com/raandree/DscConfig.Demo/_apis/build/status/dsccommunity.DscConfig.Demo?branchName=main)](https://dev.azure.com/raandree/DscConfig.Demo/_build) | [![GitHub last commit](https://img.shields.io/github/last-commit/raandree/DscConfig.Demo/main.svg)](https://github.com/raandree/DscConfig.Demo/tree/master/) | [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/DscConfig.Demo.svg)](https://www.powershellgallery.com/packages/DscConfig.Demo/) | [![PowerShell Gallery (with prereleases)](https://img.shields.io/powershellgallery/vpre/DscConfig.Demo?label=DscConfig.Demo%20Preview)](https://www.powershellgallery.com/packages/DscConfig.Demo/)
 
-[![GitHub issues](https://img.shields.io/github/issues/dsccommunity/DscConfig.Demo.svg)](https://github.com/dsccommunity/DscConfig.Demo/issues)
+[![GitHub issues](https://img.shields.io/github/issues/raandree/DscConfig.Demo.svg)](https://github.com/raandree/DscConfig.Demo/issues)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/DscConfig.Demo.svg)](https://www.powershellgallery.com/packages/DscConfig.Demo/)
 
 This project is intended to suggest a new structure for sharing DSC Configuration, taking most of the ideas from [Michael Greene](https://github.com/mgreenegit/) in [the dscconfigurations repo](https://github.com/powershell/dscconfigurations).
