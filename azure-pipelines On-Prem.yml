@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-    - main
+    - '*'
   paths:
     exclude:
     - CHANGELOG.md
@@ -245,12 +245,13 @@ stages:
             displayName: 'Publish Release'
             inputs:
               filePath: './build.ps1'
-              arguments: '-tasks publish'
+              arguments: '-tasks publishAzDo'
             env:
               GitHubToken: $(GitHubToken)
               GalleryApiToken: $(GalleryApiToken)
               ReleaseBranch: $(defaultBranch)
               MainGitBranch: $(defaultBranch)
+              BasicAuthPAT: $(BASICAUTHPAT)
           #- task: PowerShell@2
           #  name: sendChangelogPR
           #  displayName: 'Send Changelog PR'
