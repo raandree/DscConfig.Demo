@@ -247,11 +247,10 @@ stages:
               filePath: './build.ps1'
               arguments: '-tasks publishAzDo'
             env:
-              GitHubToken: $(GitHubToken)
+              BasicAuthPAT: $(BasicAuthPAT)
               GalleryApiToken: $(GalleryApiToken)
               ReleaseBranch: $(defaultBranch)
               MainGitBranch: $(defaultBranch)
-              BasicAuthPAT: $(BASICAUTHPAT)
           #- task: PowerShell@2
           #  name: sendChangelogPR
           #  displayName: 'Send Changelog PR'

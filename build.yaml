@@ -64,10 +64,9 @@ BuildWorkflow:
     - Create_ChangeLog_GitHub_PR
 
   publishAzDo:
-    - Publish_Module_To_gallery
-    - Publish_GitHub_Wiki_Content
     - Create_Release_Git_Tag
     - Create_Changelog_Branch
+    - Publish_Module_To_gallery
 
 ####################################################
 #          Pester Configuration (Sampler)          #
