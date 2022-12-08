@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: RegistryValues
+// CommonTasks YAML Reference: RegistryValues
 // ========================================
 
 :YmlCategory: RegistryValues
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/RegistryValues
+| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/RegistryValues
 | DSC Resource   | https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration]
 | Documentation  | https://github.com/dsccommunity/xPSDesiredStateConfiguration#xregistry[xRegistry]
 |===
@@ -80,7 +80,7 @@
 | ValueType
 |
 | String
-| The type the specified registry key value should have.
+| The type the specified registry key value should have. 
 | - String
   - Binary
   - DWord
@@ -125,12 +125,12 @@ RegistryValues:
 
     - Key: HKLM:\Software\Policies\Microsoft\Cryptography\Configuration\SSL\00010002
       ValueName: EccCurves
-      ValueData:
+      ValueData: 
         - curve25519
         - NistP256
         - NistP384
       ValueType: MultiString
-
+      
     - Key: HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames
       Ensure: Absent
 ----

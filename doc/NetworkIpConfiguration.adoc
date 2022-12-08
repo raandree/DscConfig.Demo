@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: NetworkIpConfiguration
+// CommonTasks YAML Reference: NetworkIpConfiguration
 // ==================================================
 
 :YmlCategory: NetworkIpConfiguration
@@ -25,8 +25,8 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/NetworkIpConfiguration
-| DSC Resource   | https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration],
+| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/NetworkIpConfiguration
+| DSC Resource   | https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration], 
                    https://github.com/dsccommunity/NetworkingDsc[NetworkingDsc]
 | Documentation  | {ref_networkingdsc_ipaddress},
                    {ref_networkingdsc_defaultgatewayaddress},
@@ -35,7 +35,7 @@
                    {ref_networkingdsc_netbios},
                    {ref_networkingdsc_netadapterbinding},
                    {ref_networkingdsc_route}
-
+                   
 |===
 
 
@@ -104,14 +104,14 @@ If you define settings in different YAML layer files the `InterfaceAlias` must b
 ====
 
 | IpAddress
-|
+| 
 | String
 | The desired IP address, optionally including prefix length using CIDR notation. +
   See {ref_networkingdsc_ipaddress}
 |
 
 | Prefix
-|
+| 
 | Int
 | IP address prefix. +
   IPv4 classes:
@@ -195,7 +195,7 @@ The server automatically sets the value of `DomainAuthenticated` when the networ
 
 The acceptable values for this parameter are:
 
-- Public - Networks in a public place such as an airport or coffee shop.
+- Public - Networks in a public place such as an airport or coffee shop. 
            Your PC is hidden from other devices on the network and can't be used for printer and file sharing.
 - Private - Networks at home or work, where you know and trust the people and devices on the network.
             Your PC is discoverable and can be used for printer and file sharing if you set it up.
@@ -256,7 +256,7 @@ A destination prefix consists of an IP address prefix and a prefix length, separ
   - Absent
 
 | RouteMetric
-|
+| 
 | UInt16
 | Specifies an integer route metric for an IP route.
 | Default: `256`

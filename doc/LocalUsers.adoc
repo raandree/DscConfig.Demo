@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: LocalUsers
+// CommonTasks YAML Reference: LocalUsers
 // ======================================
 
 :YmlCategory: LocalUsers
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | \https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/LocalUsers
+| Source         | \https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/LocalUsers
 | DSC Resource   | https://github.com/dsccommunity/xPSDesiredStateConfiguration[xPSDesiredStateConfiguration]
 | Documentation  | https://github.com/dsccommunity/xPSDesiredStateConfiguration/tree/main/source/DSCResources/DSC_xUserResource[xUser]
 |===
@@ -31,7 +31,7 @@
 | Allowed Values
 
 | [[dscyml_localusers_users, {YmlCategory}/Users]]<<dscyml_localusers_users_details, Users>>
-|
+| 
 | Hashtable[]
 | List of users to create.
 |
@@ -56,20 +56,20 @@
 |
 
 | Password
-|
+| 
 | PSCredential
 | Specifies a new password value for the account.
 |
 
 | Ensure
-|
+| 
 | String
 | Specifies whether the user account should be present or absent.
 | - *Present* (default)
   - Absent
 
 | Disabled
-|
+| 
 | Bool
 | Indicates if the account is enabled.
 
@@ -78,19 +78,19 @@ Set this property to $true to ensure that this account is disabled, and set it t
   - False
 
 | FullName
-|
+| 
 | String
 | Specifies the full name assigned to the user account.
 |
 
 | Description
-|
+| 
 | String
 | Indicates the description you want to use for the user account
 |
 
 | PasswordChangeNotAllowed
-|
+| 
 | Bool
 | Indicates if the user can change the password.
 
@@ -99,7 +99,7 @@ Set this property to $true to ensure that the user cannot change the password.
   - *False* (default)
 
 | PasswordChangeRequired
-|
+| 
 | Bool
 | Indicates if the user must change the password at the next sign in.
 
@@ -108,7 +108,7 @@ Set this property to $true if the user must change the password.
   - False
 
 | PasswordNeverExpires
-|
+| 
 | Bool
 | Indicates if the password will expire.
 
@@ -117,7 +117,7 @@ To ensure that the password for this account will never expire, set this propert
   - *False* (default)
 
 | MemberOf
-|
+| 
 | String[]
 | List of Local Groups of the user.
 
@@ -130,7 +130,7 @@ NOTE: Only Local groups are supported.
 .Example
 [source, yaml]
 ----
-LocalUsers:
+LocalUsers:     
   Users:
     - UserName: TestUser1
       Description: Standard Local User

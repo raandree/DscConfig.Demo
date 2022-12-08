@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: WindowsServices
+// CommonTasks YAML Reference: WindowsServices
 // ===========================================
 
 :YmlCategory: WindowsServices
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/WindowsServices
+| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/WindowsServices
 | DSC Resource   | https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/?view=powershell-5.1[PSDesiredStateConfiguration]
 | Documentation  | https://docs.microsoft.com/de-de/powershell/scripting/dsc/reference/resources/windows/serviceresource?view=powershell-5.1[Service]
 |===
@@ -70,7 +70,7 @@
 |
 | String
 | The display name of the service.
-|
+| 
 
 | Path
 |
@@ -104,7 +104,7 @@
 | String
 | Indicates the state you want to ensure for the service.
 
-If no value is specified a default value is set with the following conditions:
+If no value is specified a default value is set with the following conditions: 
 
 - `StartupType` is empty       -> `Running`
 - `StartupType` is `Automatic` -> `Running`
@@ -118,7 +118,7 @@ If no value is specified a default value is set with the following conditions:
 |
 | String
 | The description of the service.
-|
+| 
 
 | StartupTimeout
 |
@@ -150,7 +150,7 @@ If no value is specified a default value is set with the following conditions:
 |
 | Boolean
 | Indicates whether the target service exists on the system. +
-  Set this property to `Absent` to ensure that the target service does not exist.
+  Set this property to `Absent` to ensure that the target service does not exist. 
   Setting it to `Present` ensures that target service exists.
 | - *Present* (default)
   - Absent
