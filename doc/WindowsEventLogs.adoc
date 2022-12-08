@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: WindowsEventLogs
+// CommonTasks YAML Reference: WindowsEventLogs
 // ========================================
 
 :YmlCategory: WindowsEventLogs
@@ -19,7 +19,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/WindowsEventLogs
+| Source         | https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/WindowsEventLogs
 | DSC Resource   | https://github.com/dsccommunity/ComputerManagementDsc[ComputerManagementDsc]
 | Documentation  | {ref_WindowsEventLogs}
 |===
@@ -67,7 +67,7 @@
   - False
 
 | MaximumSizeInBytes
-|
+| 
 | System.Int64
 | Specifies the given maximum size in bytes for a specified Windows Event Log
 | >= 1028KB

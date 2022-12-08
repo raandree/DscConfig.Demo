@@ -1,4 +1,4 @@
-// DscConfig.Demo YAML Reference: SmbShares
+// CommonTasks YAML Reference: SmbShares
 // =====================================
 
 :YmlCategory: SmbShares
@@ -15,7 +15,7 @@
 
 [cols="1,3a" options="autowidth" caption=]
 |===
-| Source         | \https://github.com/dsccommunity/DscConfig.Demo/tree/main/source/DSCResources/SmbShares
+| Source         | \https://github.com/dsccommunity/CommonTasks/tree/main/source/DSCResources/SmbShares
 | DSC Resource   | https://github.com/dsccommunity/ComputerManagementDsc[ComputerManagementDsc]
 | Documentation  | https://github.com/dsccommunity/ComputerManagementDsc/wiki/SmbServerConfiguration[SmbServerConfiguration],
                    https://github.com/dsccommunity/ComputerManagementDsc/wiki/SmbShare[SmbShare],
@@ -39,15 +39,15 @@
 Supported are Windows Server and Windows 10
 | - *Server* (default)
   - Client
-
+  
 | [[dscyml_smbshares_serverconfiguration, {YmlCategory}/ServerConfiguration]]<<dscyml_smbshares_serverconfiguration_details, ServerConfiguration>>
-|
+| 
 | hashtable
 | SMB Server Settings
 |
 
 | [[dscyml_smbshares_shares, {YmlCategory}/Shares]]<<dscyml_smbshares_shares_details, Shares>>
-|
+| 
 | hashtable[]
 | SMB shares and access permissions to SMB shares
 |
@@ -65,270 +65,270 @@ Supported are Windows Server and Windows 10
 | Description
 | Allowed Values
 
-| AnnounceComment
+| AnnounceComment	
 |
 |	String
-|	Specifies the announce comment string.
+|	Specifies the announce comment string.	
 |
 
 | AnnounceServer
 |
 | Boolean
-| Specifies whether this server announces itself by using browser announcements.
+| Specifies whether this server announces itself by using browser announcements.	
 |
 
 | AsynchronousCredits
 |
 | UInt32
-| Specifies the asynchronous credits.
+| Specifies the asynchronous credits.	
 |
 
-| AuditSmb1Access
+| AuditSmb1Access	
 |
 | Boolean
-| Enables auditing of SMB version 1 protocol in Windows Event Log.
+| Enables auditing of SMB version 1 protocol in Windows Event Log.	
 | - True
   - False
 
 | AutoDisconnectTimeout
 |
 | UInt32
-| Specifies the auto disconnect time-out.
+| Specifies the auto disconnect time-out.	
 |
 
 | AutoShareServer
 |
 | Boolean
-| Specifies that the default server shares are shared out.
+| Specifies that the default server shares are shared out.	
 | - True
   - False
 
 | AutoShareWorkstation
 |
 | Boolean
-| Specifies whether the default workstation shares are shared out.
+| Specifies whether the default workstation shares are shared out.	
 | - True
   - False
 
 | CachedOpenLimit
 |
 | UInt32
-| Specifies the maximum number of cached open files.
+| Specifies the maximum number of cached open files.	
 |
 
 | DurableHandleV2TimeoutInSeconds
 |
 | UInt32
-| Specifies the durable handle v2 time-out period, in seconds.
+| Specifies the durable handle v2 time-out period, in seconds.	
 |
 
 | EnableAuthenticateUserSharing
 |
 | Boolean
-| Specifies whether authenticate user sharing is enabled.
+| Specifies whether authenticate user sharing is enabled.	
 | - True
   - False
 
 | EnableDownlevelTimewarp
 |
 | Boolean
-| Specifies whether down-level timewarp support is disabled.
+| Specifies whether down-level timewarp support is disabled.	
 | - True
   - False
 
 | EnableForcedLogoff
 |
 | Boolean
-| Specifies whether forced logoff is enabled.
+| Specifies whether forced logoff is enabled.	
 | - True
   - False
 
 | EnableLeasing
 |
 | Boolean
-| Specifies whether leasing is disabled.
+| Specifies whether leasing is disabled.	
 | - True
   - False
 
 | EnableMultiChannel
 |
 | Boolean
-| Specifies whether multi-channel is disabled.
+| Specifies whether multi-channel is disabled.	
 | - True
   - False
 
 | EnableOplocks
 |
 | Boolean
-| Specifies whether the opportunistic locks are enabled.
+| Specifies whether the opportunistic locks are enabled.	
 | - True
   - False
 
 | EnableSMB1Protocol
-|
+| 
 | Boolean
-| Specifies whether the SMB1 protocol is enabled.
+| Specifies whether the SMB1 protocol is enabled.	
 | - True
   - False
 
 | EnableSMB2Protocol
 |
 | Boolean
-| Specifies whether the SMB2 protocol is enabled.
+| Specifies whether the SMB2 protocol is enabled.	
 | - True
   - False
 
 | EnableSecuritySignature
 |
 | Boolean
-| Specifies whether the security signature is enabled.
+| Specifies whether the security signature is enabled.	
 | - True
   - False
 
 | EnableStrictNameChecking
 |
 | Boolean
-| Specifies whether the server should perform strict name checking on incoming connects.
+| Specifies whether the server should perform strict name checking on incoming connects.	
 | - True
   - False
 
 | EncryptData
-|
+| 
 | Boolean
-| Specifies whether the sessions established on this server are encrypted.
+| Specifies whether the sessions established on this server are encrypted.	
 | - True
   - False
 
 | IrpStackSize
 |
 | UInt32
-| Specifies the default IRP stack size.
+| Specifies the default IRP stack size.	
 |
 
 | KeepAliveTime
 |
 | UInt32
-| Specifies the keep alive time.
+| Specifies the keep alive time.	
 |
 
 | MaxChannelPerSession
 |
 | UInt32
-| Specifies the maximum channels per session.
+| Specifies the maximum channels per session.	
 |
 
 | MaxMpxCount
 |
 | UInt32
-| Specifies the maximum MPX count for SMB1.
+| Specifies the maximum MPX count for SMB1.	
 |
 
 | MaxSessionPerConnection
 |
 | UInt32
-| Specifies the maximum sessions per connection.
+| Specifies the maximum sessions per connection.	
 |
 
 | MaxThreadsPerQueue
 |
 | UInt32
-| Specifies the maximum threads per queue.
+| Specifies the maximum threads per queue.	
 |
 
 | MaxWorkItems
 |
 | UInt32
-| Specifies the maximum SMB1 work items.
+| Specifies the maximum SMB1 work items.	
 |
 
 | NullSessionPipes
 |
 | String
-| Specifies the null session pipes.
+| Specifies the null session pipes.	
 |
 
 | NullSessionShares
 |
 | String
-| Specifies the null session shares.
+| Specifies the null session shares.	
 |
 
 | OplockBreakWait
 |
 | UInt32
-| Specifies how long the create caller waits for an opportunistic lock break.
+| Specifies how long the create caller waits for an opportunistic lock break.	
 |
 
 | PendingClientTimeoutInSeconds
 |
 | UInt32
-| Specifies the pending client time-out period, in seconds.
+| Specifies the pending client time-out period, in seconds.	
 |
 
 | RejectUnencryptedAccess
 |
 | Boolean
-| Specifies whether the client that does not support encryption is denied access if it attempts to connect to an encrypted share.
+| Specifies whether the client that does not support encryption is denied access if it attempts to connect to an encrypted share.	
 | - True
   - False
 
 | RequireSecuritySignature
 |
 | Boolean
-| Specifies whether the security signature is required.
+| Specifies whether the security signature is required.	
 | - True
   - False
 
 | ServerHidden
 |
 | Boolean
-| Specifies whether the server announces itself.
+| Specifies whether the server announces itself.	
 | - True
   - False
 
 | Smb2CreditsMax
 |
 | UInt32
-| Specifies the maximum SMB2 credits.
+| Specifies the maximum SMB2 credits.	
 |
 
 | Smb2CreditsMin
 |
 | UInt32
-| Specifies the minimum SMB2 credits.
+| Specifies the minimum SMB2 credits.	
 |
 
 | SmbServerNameHardeningLevel
 |
 | UInt32
-| Specifies the SMB Service name hardening level.
+| Specifies the SMB Service name hardening level.	
 |
 
 | TreatHostAsStableStorage
 |
 | Boolean
-| Specifies whether the host is treated as the stable storage.
+| Specifies whether the host is treated as the stable storage.	
 | - True
   - False
 
 | ValidateAliasNotCircular
 |
 | Boolean
-| Specifies whether the aliases that are not circular are validated.
+| Specifies whether the aliases that are not circular are validated.	
 | - True
   - False
 
 | ValidateShareScope
 |
 | Boolean
-| Specifies whether the existence of share scopes is checked during share creation.
+| Specifies whether the existence of share scopes is checked during share creation.	
 | - True
   - False
 
 | ValidateShareScopeNotAliased
 |
 | Boolean
-| Specifies whether the share scope being aliased is validated.
+| Specifies whether the share scope being aliased is validated.	
 | - True
   - False
 
@@ -365,7 +365,7 @@ Supported are Windows Server and Windows 10
 |
 
 | Description
-|
+| 
 | String
 | Specifies the description of the SMB share.
 |
@@ -373,7 +373,7 @@ Supported are Windows Server and Windows 10
 | ChangeAccess
 |
 | String[]
-| Specifies which accounts will be granted modify permission to access the SMB share.
+| Specifies which accounts will be granted modify permission to access the SMB share.	
 |
 
 | ConcurrentUserLimit
@@ -433,7 +433,7 @@ Supported are Windows Server and Windows 10
 | ScopeName
 |
 | String
-| Specifies the scope in which the share should be created.
+| Specifies the scope in which the share should be created.	
 |
 
 | Ensure
