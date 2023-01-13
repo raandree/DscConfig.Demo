@@ -41,7 +41,7 @@ stages:
             inputs:
               filePath: './build.ps1'
               arguments: '-ResolveDependency -tasks pack'
-              pwsh: true
+              pwsh: false
             env:
               ModuleVersion: $(NuGetVersionV2)
 
@@ -89,7 +89,7 @@ stages:
         displayName: 'Windows (Windows PowerShell)'
         timeoutInMinutes: 120
         pool:
-          vmImage: 'windows-2019'
+          vmImage: 'windows-latest'
         steps:
           - task: DownloadPipelineArtifact@2
             displayName: 'Download Build Artifact'
