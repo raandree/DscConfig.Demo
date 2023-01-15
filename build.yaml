@@ -45,7 +45,6 @@ BuildWorkflow:
     - Create_Changelog_Release_Output
     - Generate_Conceptual_Help
     - Generate_Wiki_Content
-    - FixEncoding
 
   pack:
     - build
@@ -59,9 +58,9 @@ BuildWorkflow:
     - Pester_If_Code_Coverage_Under_Threshold
 
   publish:
+    - publish_module_to_gallery
     - Publish_Release_To_GitHub
-    - Publish_Module_To_gallery
-    - Publish_GitHub_Wiki_Content
+    #- Publish_GitHub_Wiki_Content
     - Create_ChangeLog_GitHub_PR
 
 ####################################################

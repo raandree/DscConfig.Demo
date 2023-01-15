@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated badges.
 - Merging with [CommonTasks](https://github.com/dsccommunity/CommonTasks).
-- Updated pipeline to latest version of Sampler.
+- Updated pipeline to latest version of Sampler without Release Wiki task.
 
 ## [0.8.0] - 2022-04-21
 
