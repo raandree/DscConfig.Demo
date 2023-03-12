@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Changed
+### Changed
 
 - These modules have been updated:
   - ComputerManagementDsc to '9.0.0'
