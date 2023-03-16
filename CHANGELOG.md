@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - ComputerManagementDsc to '9.0.0'
   - NetworkingDsc to '9.0.0'
   - WebAdministrationDsc to '4.1.0'
+- Added tasks from 'Sampler.AzureDevOpsTasks' to fix publishing issues in Azure DevOps Server.
 
 ## [0.8.2] - 2023-01-15
 

@@ -14,6 +14,8 @@ ModuleBuildTasks:
     - '*.build.Sampler.ib.tasks'
   Sampler.GitHubTasks:
     - '*.ib.tasks'
+  Sampler.AzureDevOpsTasks:
+    - 'Task.*'
   DscResource.DocGenerator:
     - 'Task.*'
   DscResource.Test:
@@ -59,10 +61,11 @@ BuildWorkflow:
     - Pester_If_Code_Coverage_Under_Threshold
 
   publish:
+    #- Create_AzureDevOps_Release
+    - Create_Release_Git_Tag
+    - Create_Changelog_Branch
+    - Create_PR_From_SourceBranch
     - publish_module_to_gallery
-    - Publish_Release_To_GitHub
-    #- Publish_GitHub_Wiki_Content
-    - Create_ChangeLog_GitHub_PR
 
 ####################################################
 #          Pester Configuration (Sampler)          #
@@ -126,3 +129,23 @@ GitHubConfig:
 DscResource.DocGenerator:
   Generate_Conceptual_Help:
     BuiltModuleSubdirectory: Module
+
+####################################################
+#                Git Configuration                 #
+####################################################
+GitConfig:
+  UserName: dscbot
+  UserEmail: dsccommunity@outlook.com
+
+####################################################
+#            Pull Request Configuration            #
+####################################################
+PullRequestConfig:
+  BranchName: updateChangelogAfterv{0}
+  Title: Updating Changelog since release of v{0} +semver:skip
+  Description: Updating Changelog since release of v{0} +semver:skip
+  Instance: dscdo01:8080
+  Collection: AutomatedLab
+  Project: DscConfig.Demo
+  RepositoryID: DscConfig.Demo
+  Debug: false
