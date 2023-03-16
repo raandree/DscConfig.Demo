@@ -61,11 +61,10 @@ BuildWorkflow:
     - Pester_If_Code_Coverage_Under_Threshold
 
   publish:
-    #- Create_AzureDevOps_Release
-    - Create_Release_Git_Tag
-    - Create_Changelog_Branch
-    - Create_PR_From_SourceBranch
     - publish_module_to_gallery
+    #- Create_AzureDevOps_Release
+    - Publish_Release_To_GitHub
+    - Create_ChangeLog_GitHub_PR
 
 ####################################################
 #          Pester Configuration (Sampler)          #
