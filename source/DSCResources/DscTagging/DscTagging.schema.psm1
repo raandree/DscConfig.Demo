@@ -4,6 +4,10 @@ configuration DscTagging {
         [System.Version]
         $Version,
 
+        [Parameter()]
+        [int]
+        $BuildNumber,
+
         [Parameter(Mandatory = $true)]
         [string]
         $Environment,
@@ -28,7 +32,7 @@ configuration DscTagging {
     Import-DscResource -ModuleName PSDesiredStateConfiguration
     Import-DscResource -ModuleName xPSDesiredStateConfiguration
 
-    if ($DisableGitCommitId -ne $false)
+    if (-not $DisableGitCommitId)
     {
         $gitCommitId = git log -n 1 *>&1
         $gitCommitId = if ($gitCommitId -like '*fatal*')
@@ -85,7 +89,7 @@ configuration DscTagging {
     {
         Key       = 'HKEY_LOCAL_MACHINE\SOFTWARE\DscTagging'
         ValueName = 'BuildNumber'
-        ValueData = "$($env:BHBuildNumber)"
+        ValueData = $BuildNumber
         ValueType = 'String'
         Ensure    = 'Present'
         Force     = $true
