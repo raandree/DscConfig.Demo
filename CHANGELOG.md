@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - DscTagging: Added parameter 'BuildNumber'.
 
+### Changed
+
+- Sync with CommonTasks.
+
 ## [0.8.3] - 2023-03-16
 
 ### Changed
