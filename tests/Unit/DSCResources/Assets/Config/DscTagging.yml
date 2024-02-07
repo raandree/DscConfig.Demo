@@ -1,9 +1,0 @@
-Version: 1.0.0
-Environment: Dev
-NodeVersion:
-NodeRole: FileServer
-DisableGitCommitId: false
-Layers:
-  - Layer1
-  - Layer2
-  - Layer3

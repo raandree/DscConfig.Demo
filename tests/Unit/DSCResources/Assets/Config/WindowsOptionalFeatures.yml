@@ -1,6 +1,0 @@
-﻿RemoveFilesOnDisable: false
-NoWindowsUpdateCheck: false
-Names:
-  - +TFTP
-  - -TelnetClient
-  - Hyper-V
