@@ -42,7 +42,7 @@ stages:
             inputs:
               filePath: './build.ps1'
               arguments: '-ResolveDependency -tasks pack'
-              pwsh: false
+              pwsh: true
             env:
               ModuleVersion: $(NuGetVersionV2)
 
@@ -76,7 +76,7 @@ stages:
             inputs:
               filePath: './build.ps1'
               arguments: '-Tasks hqrmtest'
-              pwsh: false
+              pwsh: true
 
           - task: PublishTestResults@2
             displayName: 'Publish Test Results'
@@ -87,7 +87,7 @@ stages:
             condition: succeededOrFailed()
 
       - job: test_windows_ps
-        displayName: 'Windows (Windows PowerShell)'
+        displayName: 'Windows (PowerShell)'
         timeoutInMinutes: 120
         pool:
           vmImage: 'windows-latest'
@@ -105,7 +105,7 @@ stages:
             inputs:
               filePath: './build.ps1'
               arguments: '-tasks test'
-              pwsh: false
+              pwsh: true
 
           - task: PublishTestResults@2
             displayName: 'Publish Test Results'
