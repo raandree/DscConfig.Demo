@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sync with CommonTasks.
 - Updated build scripts to Sampler 0.119.0-preview0005.
+- Migrated build to PowerShell 7.
 
 ## [0.8.3] - 2023-03-16
 
