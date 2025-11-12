@@ -1,10 +1,10 @@
 trigger:
   branches:
     include:
-    - '*'
+    - main
   paths:
-    exclude:
-    - CHANGELOG.md
+    include:
+    - source/*
   tags:
     include:
     - "v*"
