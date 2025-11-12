@@ -1,12 +1,4 @@
 @{
-    PSDependOptions              = @{
-        AddToPath  = $true
-        Target     = 'output\RequiredModules'
-        Parameters = @{
-            Repository      = 'PSGallery'
-            AllowPreRelease = $true
-        }
-    }
 
     InvokeBuild                  = 'latest'
     PSScriptAnalyzer             = 'latest'
@@ -24,6 +16,7 @@
     MarkdownLinkCheck            = 'latest'
     'DscResource.AnalyzerRules'  = 'latest'
     'DscResource.DocGenerator'   = 'latest'
+    PSDesiredStateConfiguration  = 'latest'
 
     #DSC Resources
     xPSDesiredStateConfiguration = '9.1.0'
