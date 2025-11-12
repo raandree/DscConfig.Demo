@@ -16,7 +16,7 @@
     MarkdownLinkCheck            = 'latest'
     'DscResource.AnalyzerRules'  = 'latest'
     'DscResource.DocGenerator'   = 'latest'
-    PSDesiredStateConfiguration  = 'latest'
+    #PSDesiredStateConfiguration  = 'latest'
 
     #DSC Resources
     xPSDesiredStateConfiguration = '9.1.0'
