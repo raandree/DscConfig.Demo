@@ -1,12 +1,4 @@
 @{
-    PSDependOptions              = @{
-        AddToPath  = $true
-        Target     = 'output\RequiredModules'
-        Parameters = @{
-            Repository      = 'PSGallery'
-            AllowPreRelease = $true
-        }
-    }
 
     InvokeBuild                  = 'latest'
     PSScriptAnalyzer             = 'latest'
@@ -19,11 +11,12 @@
     'Sampler.AzureDevOpsTasks'   = 'latest'
     Datum                        = 'latest'
     'Datum.ProtectedData'        = 'latest'
-    DscBuildHelpers              = 'latest'
+    DscBuildHelpers              = '0.2.1'
     'DscResource.Test'           = 'latest'
     MarkdownLinkCheck            = 'latest'
     'DscResource.AnalyzerRules'  = 'latest'
     'DscResource.DocGenerator'   = 'latest'
+    #PSDesiredStateConfiguration  = 'latest'
 
     #DSC Resources
     xPSDesiredStateConfiguration = '9.1.0'
