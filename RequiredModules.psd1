@@ -11,7 +11,7 @@
     'Sampler.AzureDevOpsTasks'   = 'latest'
     Datum                        = 'latest'
     'Datum.ProtectedData'        = 'latest'
-    DscBuildHelpers              = 'latest'
+    DscBuildHelpers              = '0.2.1'
     'DscResource.Test'           = 'latest'
     MarkdownLinkCheck            = 'latest'
     'DscResource.AnalyzerRules'  = 'latest'
