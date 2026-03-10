@@ -104,7 +104,7 @@ configuration "Config_$dscResourceName" {
         $mofFile | Should -BeOfType System.IO.FileInfo
     }
 
-    It "'<DscResourceName>' has ResourceIDs ending with [<DscResourceName>]<DscResourceName>" {
+    It "'<DscResourceName>' has ResourceIDs ending with [<DscResourceName>]<DscResourceName>" -TestCases $testCases {
         if ($Skip)
             {
                 Set-ItResult -Skipped -Because "Tests for '$dscResourceName' are skipped"
