@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Test the compiled Mof File if the RessourceID ends with the ResourceName
+
 ### Fixed
 
 - DscTagging: Added parameter 'BuildNumber'.

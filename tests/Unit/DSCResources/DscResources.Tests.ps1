@@ -104,6 +104,20 @@ configuration "Config_$dscResourceName" {
         $mofFile | Should -BeOfType System.IO.FileInfo
     }
 
+    It "'<DscResourceName>' has ResourceIDs ending with [<DscResourceName>]<DscResourceName>" -TestCases $testCases {
+        if ($Skip)
+            {
+                Set-ItResult -Skipped -Because "Tests for '$dscResourceName' are skipped"
+            }
+        $mofContent = Get-Content -Raw -Path "$($OutputDirectory)\localhost_$dscResourceName.mof"
+        $selectString = Select-String -InputObject $mofContent -Pattern 'ResourceID = ".+' -AllMatches
+        foreach ($value in $selectString.Matches | Select-Object -ExpandProperty Value)
+        {
+            $value | Should -Match -RegularExpression "(ResourceID = `".*)(:{2}\[$dscResourceName\]$dscResourceName`";)"
+        }
+    }
+
+
     AfterAll {
         Remove-Item -Path C:\Temp\JeaRoleTest.ps1
         if (-not $tempExists)
